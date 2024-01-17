@@ -1,0 +1,76 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.main-banner {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 300px;
+    background: rgb(220, 214, 202);
+    background: linear-gradient(180deg, rgba(220, 214, 202, 1) 0%, rgb(243, 243, 243) 100%);
+    padding: 10px;
+    align-items: center;
+    position: relative;
+
+    .pre-text {
+        font-weight: 600;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .music-text {
+        font-weight: 900;
+        font-size: 70px;
+        line-height: 55px;
+        font-kerning: normal;
+        margin-top: 15px;
+
+        &.outlined {
+            color: transparent;
+            /* -webkit-text-stroke-width: 2px; */
+            -webkit-text-stroke-color: rgb(0, 0, 0);
+
+            &.first {
+                -webkit-text-stroke-width: 2px;
+                opacity: 70%;
+            }
+
+            &.second {
+                -webkit-text-stroke-width: 1px;
+                opacity: 50%;
+            }
+
+            &.third {
+                -webkit-text-stroke-width: 1px;
+                opacity: 20%;
+            }
+
+            &.fourth {
+                -webkit-text-stroke-width: 1px;
+                opacity: 10%;
+            }
+        }
+    }
+
+    .main-headphone {
+        position: absolute;
+        top: 220px;
+        transform: rotate(16deg);
+    }
+
+    .cta-btn {
+        background-color: black;
+        color: white;
+        width: 90%;
+        border: none;
+        border-radius: 30px;
+        padding: 7px 0px;
+        font-size: 18px;
+        margin-top: 30px;
+    }
+}
+
+.logo {
+    margin-top: 30px;
+}
