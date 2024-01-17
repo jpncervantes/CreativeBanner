@@ -1,76 +1,181 @@
+@import url(animations.css);
+
 body {
     font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .main-banner {
-    display: flex;
-    flex-direction: column;
-    height: 600px;
-    width: 300px;
     background: rgb(220, 214, 202);
     background: linear-gradient(180deg, rgba(220, 214, 202, 1) 0%, rgb(243, 243, 243) 100%);
+    border: 1px solid rgb(224, 219, 210);
+    height: 600px;
+    width: 300px;
     padding: 10px;
-    align-items: center;
-    position: relative;
+    overflow: hidden;
 
-    .pre-text {
-        font-weight: 600;
-        margin-top: 30px;
-        margin-bottom: 10px;
-    }
+    .first-frame {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        animation: exit-animation 0.7s ease-in 5s forwards;
 
-    .music-text {
-        font-weight: 900;
-        font-size: 70px;
-        line-height: 55px;
-        font-kerning: normal;
-        margin-top: 15px;
+        .pretext-container {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
 
-        &.outlined {
-            color: transparent;
-            /* -webkit-text-stroke-width: 2px; */
-            -webkit-text-stroke-color: rgb(0, 0, 0);
-
-            &.first {
-                -webkit-text-stroke-width: 2px;
-                opacity: 70%;
+            .pre-text-1 {
+                font-weight: 600;
+                margin-top: 30px;
+                margin-bottom: 10px;
+                animation: opacity-animation 0.5s 0.5s backwards, pretext-animation 0.5s 2s backwards;
             }
-
-            &.second {
-                -webkit-text-stroke-width: 1px;
-                opacity: 50%;
+            .pre-text-2 {
+                font-weight: 600;
+                margin-top: 30px;
+                margin-bottom: 10px;
+                animation: opacity-animation 0.5s 0.7s backwards, pretext-animation 0.5s 2s backwards;
             }
-
-            &.third {
-                -webkit-text-stroke-width: 1px;
-                opacity: 20%;
+            .pre-text-3 {
+                font-weight: 600;
+                margin-top: 30px;
+                margin-bottom: 10px;
+                animation: opacity-animation 0.5s 0.9s backwards, pretext-animation 0.5s 2s backwards;
             }
-
-            &.fourth {
-                -webkit-text-stroke-width: 1px;
-                opacity: 10%;
+            .pre-text-4 {
+                font-weight: 600;
+                margin-top: 30px;
+                margin-bottom: 10px;
+                animation: opacity-animation 0.5s 1.1s backwards, pretext-animation 0.5s 2s backwards;
             }
+        }
+
+        .music-text {
+            font-weight: 900;
+            font-size: 70px;
+            line-height: 55px;
+            font-kerning: normal;
+            margin-top: 15px;
+            animation: maintext-animation 0.7s 1.9s ease-out backwards;
+
+            &.outlined {
+                color: transparent;
+                /* -webkit-text-stroke-width: 2px; */
+                -webkit-text-stroke-color: rgb(0, 0, 0);
+
+                &.first {
+                    -webkit-text-stroke-width: 2px;
+                    opacity: 70%;
+                    animation: outlined-animation 0.6s 2.3s backwards;
+                }
+
+                &.second {
+                    -webkit-text-stroke-width: 1px;
+                    opacity: 50%;
+                    animation: outlined-animation 0.5s 2.4s backwards;
+                }
+
+                &.third {
+                    -webkit-text-stroke-width: 1px;
+                    opacity: 20%;
+                    animation: outlined-animation 0.5s 2.6s backwards;
+                }
+
+                &.fourth {
+                    -webkit-text-stroke-width: 1px;
+                    opacity: 10%;
+                    animation: outlined-animation 0.5s 2.7s backwards;
+                }
+            }
+        }
+
+        .main-headphone {
+            position: absolute;
+            top: 220px;
+            transform: rotate(16deg);
+            animation: headphone-animation 1s 3s backwards;
+        }
+
+        .logo {
+            margin-top: 30px;
+            animation: logo-animation 1s;
         }
     }
 
-    .main-headphone {
-        position: absolute;
-        top: 220px;
-        transform: rotate(16deg);
-    }
+    .second-frame {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        position: relative;
 
-    .cta-btn {
-        background-color: black;
-        color: white;
-        width: 90%;
-        border: none;
-        border-radius: 30px;
-        padding: 7px 0px;
-        font-size: 18px;
-        margin-top: 30px;
+        .pre-text-5 {
+            font-weight: 700;
+            font-size: 40px;
+            margin-top: 30px;
+            animation: maintext-animation 1s 6s backwards;
+        }
+        .pre-text-6 {
+            font-weight: 700;
+            font-size: 40px;
+            animation: maintext-animation 1s 6.1s backwards;
+        }
+        .pre-text-7 {
+            font-weight: 700;
+            font-size: 40px;
+            animation: maintext-animation 1s 6.2s backwards;
+        }
+        .pre-text-8 {
+            font-weight: 700;
+            font-size: 40px;
+            animation: maintext-animation 1s 6.3s backwards;
+        }
+
+        .image-container {
+            object-fit: contain;
+            height: 100px;
+        }
+
+        .headphone1 {
+            position: absolute;
+            top: 420px;
+            left: -30px;
+            transform: rotate(-10deg);
+        }
+
+        .headphone2 {
+            position: absolute;
+            top: 290px;
+            left: 70px;
+            transform: rotate(-14deg);
+        }
+
+        .headphone3 {
+            position: absolute;
+            top: 220px;
+            left: 190px;
+            transform: rotate(14deg);
+        }
     }
 }
 
-.logo {
-    margin-top: 30px;
+.cta-btn {
+    background-color: black;
+    color: white;
+    width: 90%;
+    border: none;
+    border-radius: 30px;
+    padding: 7px 0px;
+    font-size: 18px;
+    margin-top: 60px;
+    animation: opacity-animation 1s 2s backwards, pulse 0.7s 3s ease-out backwards, button-exit 1s 4s ease-in backwards;
+
+    &.secondframe {
+        margin-top: 20px;
+        width: 75%;
+    }
 }
