@@ -17,10 +17,6 @@ setTimeout(() => {
     firstFrame.style.display = "none";
 }, 6000);
 
-setTimeout(() => {
-    firstFrame.style.display = "flex";
-}, 10000);
-
 const mainbanner = document.getElementById("main-banner");
 
 // setInterval(() => {
@@ -34,3 +30,7 @@ const mainbanner = document.getElementById("main-banner");
 //         });
 //     }, 7000);
 // });
+
+setInterval(() => {
+    window.location.reload(1)
+}, 10000);
