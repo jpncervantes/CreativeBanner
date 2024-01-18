@@ -63,6 +63,36 @@
     }
 }
 
+@keyframes headphone-animation-2 {
+    0% {
+        transform: translate(-350px, 400px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes headphone-animation-3 {
+    0% {
+        transform: translate(-350px, 400px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+        transform: rotate(-14deg);
+    }
+}
+
+@keyframes headphone-animation-4 {
+    0% {
+        transform: translate(-350px, 400px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+        transform: rotate(14deg);
+    }
+}
+
 @keyframes pulse {
     0%,
     100% {

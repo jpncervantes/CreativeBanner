@@ -145,6 +145,7 @@ body {
             top: 420px;
             left: -30px;
             transform: rotate(-10deg);
+            animation: headphone-animation-2 1.1s 6.7s ease-out backwards;
         }
 
         .headphone2 {
@@ -152,13 +153,15 @@ body {
             top: 290px;
             left: 70px;
             transform: rotate(-14deg);
+            animation: headphone-animation-3 1.3s 6.4s ease-out backwards;
         }
 
         .headphone3 {
             position: absolute;
-            top: 220px;
+            top: 200px;
             left: 190px;
             transform: rotate(14deg);
+            animation: headphone-animation-4 1.5s 6.2s ease-out backwards;
         }
     }
 }
@@ -177,5 +180,6 @@ body {
     &.secondframe {
         margin-top: 20px;
         width: 75%;
+        animation: opacity-animation 1s 7s backwards, pulse 0.7s 8s ease-out backwards;
     }
 }
