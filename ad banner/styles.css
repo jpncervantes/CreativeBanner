@@ -7,13 +7,6 @@ body {
     justify-content: center;
     height: 100vh;
 
-    a {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        text-decoration: none;
-    }
-
     span.page-title {
         font-family: "Poppins", sans-serif;
         margin-bottom: 30px;
@@ -68,6 +61,13 @@ body {
         align-items: center;
         position: relative;
         animation: exit-animation 0.7s ease-in 5s forwards;
+
+        a {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+        }
 
         .pretext-container {
             display: flex;
