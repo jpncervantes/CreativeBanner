@@ -5,7 +5,52 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
+
+    a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    span.page-title {
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: 600;
+        border-bottom: 2px solid black;
+    }
+
+    div.info-card {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid black;
+        border-radius: 15px;
+        padding: 13px;
+        width: 300px;
+        font-family: "Poppins", sans-serif;
+        margin-right: 60px;
+    }
+
+    .controls {
+        margin-top: 20px;
+
+        button {
+            background-color: white;
+            display: flex;
+            font-family: "Poppins", sans-serif;
+            border-radius: 30px;
+            padding: 5px 25px;
+            align-items: center;
+            cursor: pointer;
+
+            img {
+                cursor: pointer;
+                margin-right: 5px;
+            }
+        }
+    }
 }
 
 .main-banner {
@@ -97,8 +142,13 @@ body {
         .main-headphone {
             position: absolute;
             top: 220px;
-            transform: rotate(16deg);
+            rotate: 16deg;
             animation: headphone-animation 1s 3s backwards;
+            transition: 0.5s ease;
+        }
+
+        .main-headphone:hover {
+            transform: scale(1.05);
         }
 
         .logo {
@@ -144,24 +194,37 @@ body {
             position: absolute;
             top: 420px;
             left: -30px;
-            transform: rotate(-10deg);
+            rotate: -10deg;
             animation: headphone-animation-2 1.1s 6.7s ease-out backwards;
+            transition: 0.8s;
+        }
+
+        .headphone1:hover {
+            transform: scale(1.07);
         }
 
         .headphone2 {
             position: absolute;
             top: 290px;
             left: 70px;
-            transform: rotate(-14deg);
+            rotate: -14deg;
             animation: headphone-animation-3 1.3s 6.4s ease-out backwards;
+            transition: 0.8s;
+        }
+        .headphone2:hover {
+            transform: scale(1.07);
         }
 
         .headphone3 {
             position: absolute;
             top: 200px;
             left: 190px;
-            transform: rotate(14deg);
+            rotate: 14deg;
             animation: headphone-animation-4 1.5s 6.2s ease-out backwards;
+            transition: 0.8s;
+        }
+        .headphone3:hover {
+            transform: scale(1.07);
         }
     }
 }
@@ -176,10 +239,16 @@ body {
     font-size: 18px;
     margin-top: 60px;
     animation: opacity-animation 1s 2s backwards, pulse 0.7s 3s ease-out backwards, button-exit 1s 4s ease-in backwards;
+    cursor: pointer;
+    transition: 0.3s ease;
 
     &.secondframe {
         margin-top: 20px;
         width: 75%;
         animation: opacity-animation 1s 7s backwards, pulse 0.7s 8s ease-out backwards;
     }
+}
+
+.cta-btn:hover {
+    transform: scale(1.04);
 }

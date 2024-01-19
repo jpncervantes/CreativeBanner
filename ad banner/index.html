@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
     </head>
     <body>
+        <div class="info-card">
+            <span class="page-title">Beats Creative Banner</span>
+            <span>An animated and responsive advertisement banner for Beats.</span>
+            <div class="controls">
+                <button onclick="refreshPage()">
+                    <img src="/assets/refresh.svg" height="23" alt="" />
+                    <span>reload animation</span>
+                </button>
+            </div>
+        </div>
         <div class="main-banner" id="main-banner">
             <div class="first-frame" id="first">
                 <img class="logo" src="./../assets/beats logo.png" height="30" alt="logo" />
@@ -22,7 +33,9 @@
                 <span class="music-text outlined third">MUSIC</span>
                 <span class="music-text outlined fourth">MUSIC</span>
                 <img class="main-headphone" id="headphone" height="280" src="/assets/headphone.png" />
-                <button class="cta-btn">SHOP NOW</button>
+                <a href="http://www.google.com/">
+                    <button class="cta-btn">SHOP NOW</button>
+                </a>
             </div>
             <div class="second-frame">
                 <span class="pre-text-5">JOIN</span>
